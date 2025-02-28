@@ -43,15 +43,7 @@ public class Main {
 
     // 1. Obtener los pedidos cuya cantidad total sea mayor a 200,000 COP.
     public static List<Order> getOrdersGreaterThan200000(List<Order> orders){
-
-        List<Order> ordersGreaterThan200000 = new ArrayList<>();
-        for (Order order: orders){
-            if (order.getTotal() > 200000){
-                ordersGreaterThan200000.add(order);
-            }
-        }
-
-        return ordersGreaterThan200000;
+        return orders.stream().filter(order -> order.getTotal() > 200000).collect(Collectors.toList());
     }
 
     // 2. Obtener una lista de clientes que tengan pedidos con estado "PENDIENTE".
