@@ -13,6 +13,14 @@ public class Client{
         return name;
     }
 
+    public String getIdentification(){
+        return identification;
+    }
+
+    public String getEmail(){
+        return email;
+    }
+
     @Override
     public String toString() {
         return "Client " + name ;
